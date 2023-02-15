@@ -21,6 +21,7 @@ class Client:
 
     def create_auth_variables(self):
         timestamp = str(int(time.time()))
+        timestamp = timestamp.encode()
 
         dev_hash = hashlib.md5()
         dev_hash.update(timestamp)
